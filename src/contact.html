@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Core-Map</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9J2cnIHgxPScwJScgeTE9JzAlJyB4Mj0nMTAwJScgeTI9JzEwMCUnPjxzdG9wIG9mZnNldD0nMCUnIHN0eWxlPSdzdG9wLWNvbG9yOiMzOGJkZjg7c3RvcC1vcGFjaXR5OjEnIC8+PHN0b3Agb2Zmc2V0PScxMDAlJyBzdHlsZT0nc3RvcC1jb2xvcjojODE4Y2Y4O3N0b3Atb3BhY2l0eToxJyAvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGZpbGw9J3VybCgjZyknIGQ9J001MCAxMCBMODUgMzAgTDg1IDcwIEw1MCA5MCBMMTUgNzAgTDE1IDMwIFogTTUwIDMwIEw2NyA0MCBMNjcgNjAgTDUwIDcwIEwzMyA2MCBMMzMgNDAgWicvPjwvc3ZnPg==">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+  </head>
+  <body>
+    <load
+      src="./partials/header.html"
+/>
+
+<main>
+  <section class="contact-page">
+      <div class="container contact-page__grid">
+
+          <div class="contact-page__info">
+              <span class="section-subtitle">Свяжитесь с нами</span>
+              <h1>Технологии, которые <span class="text-gradient">всегда на связи</span></h1>
+              <p class="section-text">Запросите бесплатную консультацию по всем вопросам. Наши эксперты в Берлине помогут расширить горизонты вашего проекта.</p>
+
+              <div class="about__image-wrapper contact-page__image">
+                  <div class="morph-shape">
+                      <img src="/img/five.jpg" alt="Core-Map Contact" class="morph-img">
+                  </div>
+                  <div class="morph-shape morph-shape--sub"></div>
+              </div>
+
+              <div class="contact-page__list">
+                  <div class="cp-item">
+                      <i data-lucide="phone"></i>
+                      <span>+49 (155) 1089-4003</span>
+                  </div>
+                  <div class="cp-item">
+                      <i data-lucide="mail"></i>
+                      <span>team@core-map.blog</span>
+                  </div>
+                  <div class="cp-item">
+                      <i data-lucide="map-pin"></i>
+                      <span>Friedrichstraße 100, 10117 Berlin, Germany</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="contact-page__form">
+              <div class="contact__form-wrapper" style="padding: 0;">
+                  <div class="form-morph-bg"></div>
+                  <form class="form" id="main-form">
+                      <h3>Напишите нам</h3>
+                      <div class="form__group">
+                          <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                      </div>
+                      <div class="form__group">
+                          <input type="email" name="email" class="form__input" placeholder="Email" required>
+                      </div>
+                      <div class="form__group">
+                          <input type="tel" name="phone" id="phone-input" class="form__input" placeholder="Телефон" required>
+                      </div>
+                      <div class="form__captcha">
+                          <label class="form__label">Капча: <span id="captcha-question"></span></label>
+                          <input type="number" id="captcha-answer" class="form__input" required>
+                      </div>
+                      <div class="form__agree">
+                          <label class="checkbox">
+                              <input type="checkbox" required>
+                              <span class="checkbox__custom"></span>
+                              <span class="checkbox__text">Согласен на обработку данных</span>
+                          </label>
+                      </div>
+                      <button type="submit" class="btn btn--primary form__submit">Отправить запрос</button>
+                      <div class="form__success" id="form-success">
+                          <i data-lucide="check-circle"></i>
+                          <h4>Заявка отправлена!</h4>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+
+    <load src="./partials/footer.html" />
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-popup__container">
+          <p class="cookie-popup__text">
+              Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+          </p>
+          <button class="btn btn--primary btn--sm" id="cookie-accept">Принять</button>
+      </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

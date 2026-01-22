@@ -1117,3 +1117,80 @@ a {
       text-align: center;
   }
 }
+.contact-page {
+  padding: 160px 0 100px;
+}
+
+.contact-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-page__image {
+  margin: 40px 0;
+  max-width: 500px;
+}
+
+.contact-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cp-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.cp-item i {
+  color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+  .contact-page__grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+/* Контейнер формы должен быть позиционирован */
+.form {
+  position: relative;
+  min-height: 450px; /* Фиксируем высоту, чтобы при скрытии полей форма не "схлопнулась" */
+}
+
+/* Сообщение об успехе */
+.form__success {
+  display: none; /* По умолчанию полностью убрано */
+  position: absolute;
+  inset: 0; /* Растягиваем на всю площадь формы */
+  background: #0f172a; /* Цвет фона вашей формы */
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  border-radius: 32px;
+}
+
+/* Класс, который включает сообщение */
+.form__success.active {
+  display: flex !important; /* Показываем только при успехе */
+  animation: fadeInForm 0.5s ease forwards;
+}
+
+@keyframes fadeInForm {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Скрываем элементы формы при успехе, чтобы они не просвечивали */
+.form.submitted-successfully .form__group,
+.form.submitted-successfully .form__captcha,
+.form.submitted-successfully .form__agree,
+.form.submitted-successfully .form__submit {
+  display: none !important;
+}
