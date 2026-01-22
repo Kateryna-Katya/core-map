@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
-    <link rel="stylesheet" crossorigin href="/test-two/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/core-map/assets/styles-Dq6NWVaT.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="container header__container">
+      <a href="/" class="header__logo">
+          <div class="logo-icon"></div>
+          <span class="logo-text">Core-Map</span>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#tech" class="header__link">Технологии</a></li>
+              <li class="header__item"><a href="#features" class="header__link">Возможности</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--primary">Начать</a>
+          <button class="burger" id="burger-menu">
+              <span></span>
+          </button>
+      </div>
   </div>
 </header>
-
 
     <main>
       <div class="container">
@@ -38,20 +43,52 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+      <div class="footer__brand">
+          <a href="/" class="footer__logo">
+              <span class="logo-text">Core-Map</span>
+          </a>
+          <p class="footer__tagline">Переосмыслите подход к развитию через AI-инструменты для реальных задач.</p>
+          <div class="footer__contacts">
+              <a href="tel:+493012345678" class="footer__contact-item">
+                  <i data-lucide="phone"></i> +49 (0) 30 1234 5678
+              </a>
+              <a href="mailto:team@core-map.blog" class="footer__contact-item">
+                  <i data-lucide="mail"></i> team@core-map.blog
+              </a>
+              <div class="footer__contact-item">
+                  <i data-lucide="map-pin"></i> Friedrichstraße 100, 10117 Berlin, Germany
+              </div>
+          </div>
+      </div>
+
+      <nav class="footer__nav">
+          <div class="footer__col">
+              <h4 class="footer__title">Навигация</h4>
+              <ul class="footer__list">
+                  <li><a href="#" class="footer__link">Главная</a></li>
+                  <li><a href="#tech" class="footer__link">Технологии</a></li>
+                  <li><a href="#features" class="footer__link">Возможности</a></li>
+                  <li><a href="#blog" class="footer__link">Блог</a></li>
+              </ul>
+          </div>
+          <div class="footer__col">
+              <h4 class="footer__title">Документы</h4>
+              <ul class="footer__list">
+                  <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+                  <li><a href="cookies.html" class="footer__link">Cookie Policy</a></li>
+                  <li><a href="terms.html" class="footer__link">Terms of Use</a></li>
+                  <li><a href="return.html" class="footer__link">Return Policy</a></li>
+                  <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
+                  <li><a href="personal-data-policy.html" class="footer__link">Personal Data</a></li>
+                  <li><a href="contact.html" class="footer__link">Contact</a></li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+  <div class="container footer__bottom">
+      <p>&copy; 2026 Core-Map. Платформа уже доступна в Европе.</p>
   </div>
 </footer>
-
   </body>
 </html>
