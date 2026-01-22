@@ -1194,3 +1194,203 @@ a {
 .form.submitted-successfully .form__submit {
   display: none !important;
 }
+/* --- MOBILE ADAPTIVE: CONTACT PAGE --- */
+
+@media (max-width: 1023px) {
+  .contact-page {
+      /* Уменьшаем огромный верхний отступ для мобильных */
+      padding: 120px 0 60px;
+  }
+
+  .contact-page__grid {
+      /* Убеждаемся, что колонки идут одна под другой */
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+  }
+
+  .contact-page__info {
+      text-align: center; /* Центрируем заголовок и текст для лучшего баланса */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-page__info h1 {
+      font-size: 32px; /* Уменьшаем размер заголовка */
+      margin-bottom: 20px;
+  }
+
+  .contact-page__image {
+      /* Центрируем анимированное изображение */
+      margin: 30px auto;
+      width: 100%;
+      max-width: 320px; /* Ограничиваем ширину на мобильных */
+  }
+
+  .contact-page__list {
+      /* Выравниваем иконки контактов по левому краю, но внутри центрированного контейнера */
+      align-items: flex-start;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+  }
+
+  .cp-item {
+      font-size: 16px; /* Чуть меньше шрифт для адресов и телефонов */
+  }
+
+  .contact-page__form {
+      /* Форма на мобильных должна занимать всю ширину */
+      width: 100%;
+  }
+
+  .form {
+      padding: 30px 20px; /* Уменьшаем внутренние отступы формы */
+      border-radius: 24px;
+      min-height: auto; /* На мобильных высота пусть будет автоматической */
+  }
+
+  /* Адаптируем капчу для узких экранов */
+  .form__captcha {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .form__label {
+      font-size: 13px;
+  }
+}
+
+/* Оптимизация для совсем маленьких экранов (iPhone SE и т.д.) */
+@media (max-width: 380px) {
+  .contact-page__info h1 {
+      font-size: 28px;
+  }
+
+  .btn {
+      padding: 12px 20px;
+      font-size: 14px;
+  }
+}
+/* --- MOBILE OPTIMIZATION: CONTACT PAGE --- */
+
+@media (max-width: 1023px) {
+  .contact-page {
+      /* Уменьшаем отступ сверху, так как мобильный хедер компактнее */
+      padding: 100px 0 60px;
+  }
+
+  .contact-page__grid {
+      grid-template-columns: 1fr; /* Переход в одну колонку */
+      gap: 40px;
+  }
+
+  .contact-page__info {
+      text-align: center;
+  }
+
+  .contact-page__info h1 {
+      font-size: 32px;
+      line-height: 1.2;
+  }
+
+  /* Масштабируем "живое" изображение для мобильных */
+  .contact-page__image {
+      max-width: 280px;
+      margin: 30px auto;
+  }
+
+  .contact-page__list {
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+  }
+
+  .cp-item {
+      font-size: 16px;
+      justify-content: center;
+  }
+
+  /* Настройка формы */
+  .contact-page__form {
+      position: relative;
+      width: 100%;
+  }
+
+  .form {
+      padding: 30px 20px;
+      border-radius: 24px;
+      min-height: auto; /* Убираем фиксированную высоту для гибкости */
+  }
+
+  .form__input {
+      /* Размер шрифта 16px предотвращает автоматический зум в iOS при фокусе */
+      font-size: 16px;
+      padding: 14px 16px;
+  }
+
+  .form__captcha {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 5px;
+  }
+
+  .form__label {
+      margin-bottom: 12px;
+      text-align: center;
+  }
+
+  /* Увеличиваем область нажатия для чекбокса */
+  .checkbox {
+      padding: 10px 0;
+  }
+
+  .checkbox__text {
+      font-size: 12px;
+      line-height: 1.4;
+  }
+
+  .form__submit {
+      height: 56px; /* Крупная кнопка для удобного нажатия пальцем */
+      font-size: 16px;
+  }
+
+  /* Сообщение об успехе на мобильных */
+  .form__success {
+      padding: 20px;
+  }
+
+  .form__success h4 {
+      font-size: 20px;
+  }
+}
+
+/* Дополнительные правки для очень маленьких экранов */
+@media (max-width: 375px) {
+  .contact-page__info h1 {
+      font-size: 28px;
+  }
+
+  .form {
+      padding: 25px 15px;
+  }
+}
+/* Фикс для секций, где есть декоративные пятна */
+.hero,
+.about,
+.innovations,
+.contact,
+.contact-page {
+    position: relative;
+    overflow: hidden; /* Обрезает все, что вылетает за границы секции */
+}
+
+/* Конкретно для обертки формы, где лежит пятно 120% */
+.contact__form-wrapper {
+    position: relative;
+    overflow: hidden; /* Пятно больше не будет "рвать" родителя */
+    border-radius: 32px; /* Чтобы скругление формы не конфликтовало с обрезом */
+}
